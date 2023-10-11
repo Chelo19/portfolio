@@ -8,8 +8,8 @@ function App() {
   const [theme, setTheme] = useState('light');
   
   return (
-    <div className="App">
-      <DarkMode/>
+    <div className="App flex justify-center items-center">
+      {/* <DarkMode/> */}
       <LandingPage/>
     </div>
   );
