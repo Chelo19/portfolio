@@ -7,7 +7,9 @@ import sun from '../../assets/sunny.svg';
 import next from '../../assets/return-down-forward.svg';
 import link from '../../assets/link.svg';
 import github from '../../assets/logo-github.svg';
+import leetcode from '../../assets/leetcode.svg';
 import coding from '../../assets/coding.gif';
+import cv from '../../assets/cv_marcelo_de_leon.pdf';
 
 export default function MainGallery(){
     const [theme, setTheme] = useState('light');
@@ -73,16 +75,27 @@ export default function MainGallery(){
             </Flip>}</button></div>
             <a href='https://www.linkedin.com/in/marcelo-amado-de-león-gómez-2190a2203/' target='_blank' className="p-4 w-48 h-48 bg-sky-800 shadow-lg rounded-lg flex justify-center items-center relative"><img className="w-10 absolute top-0 right-0 p-2" src={link} style={{filter: 'invert(98%) sepia(1%) saturate(1030%) hue-rotate(183deg) brightness(95%) contrast(94%)'}} alt="link"/><h1 className="text-8xl font-bold text-gray-200"><Fade cascade duration={2000} triggerOnce={true}>in</Fade></h1></a>
             <a href='https://github.com/Chelo19' target='_blank' className="p-4 w-48 h-48 bg-slate-700 shadow-lg rounded-lg flex justify-center items-center relative"><img className="w-10 absolute top-0 right-0 p-2" src={link} style={{filter: 'invert(98%) sepia(1%) saturate(1030%) hue-rotate(183deg) brightness(95%) contrast(94%)'}} alt="link"/><h1 className="text-6xl font-bold text-gray-200"><Fade duration={5000} triggerOnce={true}><img className="w-24" src={github} style={{filter: 'invert(98%) sepia(1%) saturate(1030%) hue-rotate(183deg) brightness(95%) contrast(94%)'}} alt="github"/></Fade></h1></a>
-            <div className="p-4 w-auto h-48 bg-sky-800 shadow-lg rounded-lg flex justify-center items-center col-span-2 relative overflow-hidden">
+            <a href={cv} target='_blank' className="p-4 w-auto h-48 bg-sky-800 shadow-lg rounded-lg flex justify-center items-center col-span-2 relative overflow-hidden">
                 <img className="w-10 absolute top-0 right-0 p-2" src={link} style={{filter: 'invert(98%) sepia(1%) saturate(1030%) hue-rotate(183deg) brightness(95%) contrast(94%)', zIndex: '3'}} alt="link"/>
                 <div className="absolute left-0 bottom-0 p-4 z-10 flex flex-col gap-1">
                     <h1 className="text-3xl text-gray-200 text-left font-bold">{lang === 'esp' ? <Fade cascade duration={200} triggerOnce={true}>Currículum.</Fade> : <Fade cascade duration={200} triggerOnce={true}>Resume.</Fade>}</h1>
                     <Slide direction='right' duration={2000} triggerOnce={true} className="text-xl text-gray-200 text-left font-medium">{lang === 'esp' ? <>Dando click aquí puedes ir a mi currículum.</> : <>Clicking here will get you to my resume.</>}</Slide>
                 </div>
                 <div className="absolute w-full h-full bg-sky-800 opacity-25" style={{zIndex: '2'}}></div>
-                <img className="absolute top-0 z-0" src={coding}/></div>
-            <div className="p-4 w-48 h-48 bg-sky-600 shadow-lg rounded-lg flex justify-center items-center">07</div>
-            <div className="p-4 w-48 h-48 bg-sky-600 shadow-lg rounded-lg flex justify-center items-center">07</div>
+                <img className="absolute top-0 z-0" src={coding}/>
+            </a>
+            <a href='https://github.com/Chelo19?tab=repositories' target='_blank' className="p-4 w-auto h-48 bg-sky-500 shadow-lg rounded-lg flex justify-center items-center col-span-3 relative overflow-hidden">
+                <img className="w-10 absolute top-0 right-0 p-2" src={link} style={{filter: 'invert(98%) sepia(1%) saturate(1030%) hue-rotate(183deg) brightness(95%) contrast(94%)', zIndex: '3'}} alt="link"/>
+                <div className="absolute left-0 bottom-0 p-4 z-10 flex flex-col gap-1">
+                    <h1 className="text-3xl text-gray-200 text-left font-bold">{lang === 'esp' ? <Fade cascade duration={200} triggerOnce={true}>Proyectos de alta calidad.</Fade> : <Fade cascade duration={200} triggerOnce={true}>Quality projects.</Fade>}</h1>
+                    <Slide direction='right' duration={2000} triggerOnce={true} className="text-xl text-gray-200 text-left font-medium">{lang === 'esp' ? <>Siempre procuro trabajar dando todo de mí, entregando siempre el mejor producto posible.</> : <>I always try to give my best, always giving the best product possible.</>}</Slide>
+                </div>
+                <div className="absolute w-full h-full bg-sky-800 opacity-25" style={{zIndex: '2'}}></div>
+                {/* <img className="absolute top-0 z-0" src={coding}/> */}
+            </a>
+            <a href='https://leetcode.com/marcelodeleongo/' target='_blank' className="p-4 w-48 h-48 bg-slate-500 shadow-lg rounded-lg flex justify-center items-center relative"><img className="w-10 absolute top-0 right-0 p-2" src={link} style={{filter: 'invert(98%) sepia(1%) saturate(1030%) hue-rotate(183deg) brightness(95%) contrast(94%)'}} alt="link"/><h1 className="text-6xl font-bold text-gray-200"><Fade duration={5000} triggerOnce={true}><img className="w-24" src={leetcode} style={{filter: 'invert(98%) sepia(1%) saturate(1030%) hue-rotate(183deg) brightness(95%) contrast(94%)'}} alt="github"/></Fade></h1></a>
+            {/* <div className="p-4 w-48 h-48 bg-sky-600 shadow-lg col-span-2 rounded-lg flex justify-center items-center">07</div> */}
+            {/* <div className="p-4 w-48 h-48 bg-sky-600 shadow-lg rounded-lg flex justify-center items-center">07</div> */}
         </div>
     )
 }
